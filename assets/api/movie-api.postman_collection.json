@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "06357e1c-5737-43d3-aedb-a291a5025332",
+		"name": "movie-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16430113"
+	},
+	"item": [
+		{
+			"name": "get-all-movie-types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ophim1.com/v1/api/quoc-gia",
+					"protocol": "https",
+					"host": [
+						"ophim1",
+						"com"
+					],
+					"path": [
+						"v1",
+						"api",
+						"quoc-gia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-contries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ophim1.com/v1/api/quoc-gia",
+					"protocol": "https",
+					"host": [
+						"ophim1",
+						"com"
+					],
+					"path": [
+						"v1",
+						"api",
+						"quoc-gia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new-movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ophim1.com/danh-sach/phim-moi-cap-nhat?page=1",
+					"protocol": "https",
+					"host": [
+						"ophim1",
+						"com"
+					],
+					"path": [
+						"danh-sach",
+						"phim-moi-cap-nhat"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "images",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://img.ophim.live/uploads/movies/tham-phan-tu-dia-nguc-thumb.jpg",
+					"protocol": "https",
+					"host": [
+						"img",
+						"ophim",
+						"live"
+					],
+					"path": [
+						"uploads",
+						"movies",
+						"tham-phan-tu-dia-nguc-thumb.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ophim1.com/danh-sach/phim-moi-cap-nhat?page=1",
+					"protocol": "https",
+					"host": [
+						"ophim1",
+						"com"
+					],
+					"path": [
+						"danh-sach",
+						"phim-moi-cap-nhat"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie-detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ophim1.com/phim/tham-phan-tu-dia-nguc",
+					"protocol": "https",
+					"host": [
+						"ophim1",
+						"com"
+					],
+					"path": [
+						"phim",
+						"tham-phan-tu-dia-nguc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies-by-type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ophim1.com/v1/api/the-loai/vo-thuat",
+					"protocol": "https",
+					"host": [
+						"ophim1",
+						"com"
+					],
+					"path": [
+						"v1",
+						"api",
+						"the-loai",
+						"vo-thuat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies-by-country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ophim1.com/v1/api/quoc-gia/trung-quoc",
+					"protocol": "https",
+					"host": [
+						"ophim1",
+						"com"
+					],
+					"path": [
+						"v1",
+						"api",
+						"quoc-gia",
+						"trung-quoc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ophim1.com/v1/api/tim-kiem?keyword=Tây Thi Tân Truyện",
+					"protocol": "https",
+					"host": [
+						"ophim1",
+						"com"
+					],
+					"path": [
+						"v1",
+						"api",
+						"tim-kiem"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "Tây Thi Tân Truyện"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "phim-le",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ophim1.com/v1/api/danh-sach/phim-le",
+					"protocol": "https",
+					"host": [
+						"ophim1",
+						"com"
+					],
+					"path": [
+						"v1",
+						"api",
+						"danh-sach",
+						"phim-le"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "phim-bo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ophim1.com/v1/api/danh-sach/phim-bo",
+					"protocol": "https",
+					"host": [
+						"ophim1",
+						"com"
+					],
+					"path": [
+						"v1",
+						"api",
+						"danh-sach",
+						"phim-bo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.figma.com/design/Z6YIkycSR9yhHG5wfSKbjE/Movie-%26-Series-Website-(Community)?node-id=0-1&node-type=canvas&t=lqG08BKx9Zsj5QKB-0",
+					"protocol": "https",
+					"host": [
+						"www",
+						"figma",
+						"com"
+					],
+					"path": [
+						"design",
+						"Z6YIkycSR9yhHG5wfSKbjE",
+						"Movie-%26-Series-Website-(Community)"
+					],
+					"query": [
+						{
+							"key": "node-id",
+							"value": "0-1"
+						},
+						{
+							"key": "node-type",
+							"value": "canvas"
+						},
+						{
+							"key": "t",
+							"value": "lqG08BKx9Zsj5QKB-0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

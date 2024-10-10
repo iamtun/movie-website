@@ -35,3 +35,6 @@
         "cursorOffset": 0
     }
   ```
+
+#### 3. API data:
+- download file json & import to postman in folder: `assets/api`
