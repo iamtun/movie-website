@@ -4,7 +4,7 @@ import axios, {
 	AxiosRequestConfig,
 	AxiosResponse,
 } from "axios";
-import { APIError } from "../errors";
+import { APIError } from "../../utils/errors";
 
 class BaseAPIService {
 	instance: AxiosInstance;
@@ -30,17 +30,19 @@ class BaseAPIService {
 				return data;
 			},
 			(error: AxiosError) => {
-				const { status } = error.response || { status: 0 };
+				const { status, data } = error?.response || { status: 0 };
+
+				console.error(data);
 
 				if (status === 404) {
-					throw new APIError("Not found", status);
+					throw new APIError("Nội dung không tìm thấy", status);
 				}
 
 				if (status >= 500) {
-					throw new APIError("Internal server error", status);
+					throw new APIError("Lỗi server", status);
 				}
 
-				throw new APIError("Unknown Error", status);
+				throw new APIError("Lỗi không xác định", status);
 			},
 		);
 	}
