@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 import React from "react";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
 
 const roboto = Roboto({
 	subsets: ["latin", "vietnamese"],
@@ -20,7 +21,11 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
 	return (
 		<html lang="vn">
-			<body className={`${roboto.className}`}>{children}</body>
+			<body className={`${roboto.className}`}>
+				<AntdRegistry>
+					<main>{children}</main>
+				</AntdRegistry>
+			</body>
 		</html>
 	);
 };
