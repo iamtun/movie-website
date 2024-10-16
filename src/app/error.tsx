@@ -1,19 +1,9 @@
-"use client"; // Error components must be Client Components
+"use client";
+import { TErrorProps } from "@/types/error";
 
-import { useEffect } from "react";
+// Error components must be Client Components
 
-export default function Error({
-	error,
-	reset,
-}: {
-	error: Error & { digest?: string };
-	reset: () => void;
-}) {
-	useEffect(() => {
-		// Log the error to an error reporting service
-		console.error(error);
-	}, [error]);
-
+const Error: React.FC<TErrorProps> = ({ error, reset }) => {
 	return (
 		<div>
 			<h2>Error Page!</h2>
@@ -28,4 +18,6 @@ export default function Error({
 			</button>
 		</div>
 	);
-}
+};
+
+export default Error;
