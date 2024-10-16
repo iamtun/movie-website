@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+import { Roboto } from "next/font/google";
+import React from "react";
 
-const geistSans = localFont({
-	src: "./fonts/GeistVF.woff",
-	variable: "--font-geist-sans",
-	weight: "100 900",
-});
-const geistMono = localFont({
-	src: "./fonts/GeistMonoVF.woff",
-	variable: "--font-geist-mono",
-	weight: "100 900",
+const roboto = Roboto({
+	subsets: ["latin", "vietnamese"],
+	weight: ["100", "300", "400", "500", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -22,16 +17,12 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function RootLayout({
-	children,
-}: Readonly<{
-	children: React.ReactNode;
-}>) {
+const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
 	return (
-		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable}`}>
-				{children}
-			</body>
+		<html lang="vn">
+			<body className={`${roboto.className}`}>{children}</body>
 		</html>
 	);
-}
+};
+
+export default RootLayout;
