@@ -3,6 +3,8 @@ import "./globals.css";
 import { Roboto } from "next/font/google";
 import React from "react";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
+import MainLayout from "@/layouts/main";
+import { ThemeProvider } from "@/context/theme";
 
 const roboto = Roboto({
 	subsets: ["latin", "vietnamese"],
@@ -23,7 +25,9 @@ const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
 		<html lang="vn">
 			<body className={`${roboto.className}`}>
 				<AntdRegistry>
-					<main>{children}</main>
+					<ThemeProvider>
+						<MainLayout>{children}</MainLayout>
+					</ThemeProvider>
 				</AntdRegistry>
 			</body>
 		</html>
