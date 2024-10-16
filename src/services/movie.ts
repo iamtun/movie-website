@@ -1,5 +1,5 @@
+import { movieAPIService } from "@/libs/axios/factories";
 import { TMovieResponse } from "@/types/movie";
-import { movieAPIService } from "@/utils/axios/factories";
 
 class MovieService {
 	constructor() {}

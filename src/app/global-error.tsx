@@ -1,5 +1,6 @@
 "use client";
 
+import ErrorUI from "@/components/error";
 import { TErrorProps } from "@/types/error";
 import React from "react";
 
@@ -7,9 +8,13 @@ const GlobalError: React.FC<TErrorProps> = ({ error, reset }) => {
 	return (
 		<html>
 			<body>
-				<h2>Global Error Page</h2>
-				<pre>{error.message}</pre>
-				<button onClick={() => reset()}>Try again</button>
+				<ErrorUI
+					status={"500"}
+					title="Lỗi"
+					message={error?.message}
+					action={reset}
+					buttonTitle="Thử lại"
+				/>
 			</body>
 		</html>
 	);
