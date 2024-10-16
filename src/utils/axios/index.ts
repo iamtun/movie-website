@@ -45,34 +45,28 @@ class BaseAPIService {
 		);
 	}
 
-	get<T>(
-		endpoint: string,
-		config?: AxiosRequestConfig,
-	): Promise<AxiosResponse<T>> {
-		return this.instance.get<T>(endpoint, config);
+	get<T>(endpoint: string, config?: AxiosRequestConfig): Promise<T> {
+		return this.instance.get(endpoint, config);
 	}
 
 	post<T>(
 		endpoint: string,
 		data?: unknown,
 		config?: AxiosRequestConfig,
-	): Promise<AxiosResponse<T>> {
-		return this.instance.post<T>(endpoint, data, config);
+	): Promise<T> {
+		return this.instance.post(endpoint, data, config);
 	}
 
 	put<T>(
 		endpoint: string,
 		data?: unknown,
 		config?: AxiosRequestConfig,
-	): Promise<AxiosResponse<T>> {
-		return this.instance.put<T>(endpoint, data, config);
+	): Promise<T> {
+		return this.instance.put(endpoint, data, config);
 	}
 
-	delete<T>(
-		endpoint: string,
-		config?: AxiosRequestConfig,
-	): Promise<AxiosResponse<T>> {
-		return this.instance.delete<T>(endpoint, config);
+	delete<T>(endpoint: string, config?: AxiosRequestConfig): Promise<T> {
+		return this.instance.delete(endpoint, config);
 	}
 }
 
