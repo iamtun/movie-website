@@ -1,9 +1,10 @@
 "use client";
-import { Button, Input } from "antd";
+import { Button } from "antd";
 import React, { memo } from "react";
 import styles from "./header.module.css";
 import { useTheme } from "@/context/theme";
-import { MdDarkMode, MdLightMode, MdOutlineSearch } from "react-icons/md";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
+import Search from "./search";
 
 type THeader = {
 	className?: string;
@@ -20,12 +21,8 @@ const Header: React.FC<THeader> = ({ className }) => {
 						<p>TBox</p>
 					</div>
 
-					<Input
-						size="large"
-						placeholder="Tìm kiếm..."
-						prefix={<MdOutlineSearch size={24} />}
-						className={styles["search"]}
-					/>
+					<Search className={styles["search--large_screen"]} />
+
 					<Button
 						icon={theme === "light" ? <MdDarkMode /> : <MdLightMode />}
 						onClick={toggleTheme}
@@ -33,12 +30,7 @@ const Header: React.FC<THeader> = ({ className }) => {
 					/>
 				</div>
 
-				<Input
-					size="large"
-					placeholder="Tìm kiếm..."
-					prefix={<MdOutlineSearch size={24} />}
-					className={styles["search--small_screen"]}
-				/>
+				<Search className={styles["search--small_screen"]} />
 			</div>
 		</header>
 	);
