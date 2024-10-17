@@ -1,5 +1,5 @@
 import { movieAPIService } from "@/libs/axios/factories";
-import { TMovieResponse } from "@/types/movie";
+import { TMovieResponse, TMovieResponseWrappedData } from "@/types/movie";
 
 class MovieService {
 	constructor() {}
@@ -7,6 +7,12 @@ class MovieService {
 	async getNewMovieUpdated(page: number = 1) {
 		return movieAPIService.get<TMovieResponse>(
 			`/danh-sach/phim-moi-cap-nhat?page=${page}`,
+		);
+	}
+
+	async searchMoveByKeyword(keyword: string) {
+		return movieAPIService.get<TMovieResponseWrappedData>(
+			`/v1/api/tim-kiem?keyword=${keyword}`,
 		);
 	}
 }
