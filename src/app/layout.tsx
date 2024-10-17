@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
 	return (
-		<html lang="vn">
+		<html lang="vi">
 			<body className={`${roboto.className}`}>
 				<AntdRegistry>
 					<ThemeProvider>
