@@ -7,7 +7,7 @@
 	color: var(--text-color);
 	text-align: center;
 	padding: 20px;
-	height: 80px;
+	min-height: 80px;
 	margin: 0 auto;
 	position: sticky;
 	top: 0;
@@ -19,12 +19,42 @@
 		width: 100%;
 		max-width: var(--max-w-container);
 		display: flex;
-		align-items: center;
-		justify-content: space-between;
+
+		.header--large_screen {
+			width: inherit;
+			align-items: center;
+			justify-content: space-between;
+			display: flex;
+		}
 
 		.logo {
 			font-size: 32px;
 			font-weight: 700;
+		}
+
+		.search {
+			width: 40%;
+
+			@media screen and (max-width: 768px) {
+				width: 60%;
+			}
+
+			@media screen and (max-width: 480px) {
+				display: none;
+			}
+		}
+
+		.search--small_screen {
+			display: none;
+
+			@media screen and (max-width: 480px) {
+				display: inline-flex;
+				margin-top: 12px;
+			}
+		}
+
+		@media screen and (max-width: 480px) {
+			flex-direction: column;
 		}
 	}
 }

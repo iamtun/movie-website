@@ -1,9 +1,9 @@
 "use client";
-import { Button } from "antd";
-import React from "react";
+import { Button, Input } from "antd";
+import React, { memo } from "react";
 import styles from "./header.module.css";
 import { useTheme } from "@/context/theme";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { MdDarkMode, MdLightMode, MdOutlineSearch } from "react-icons/md";
 
 type THeader = {
 	className?: string;
@@ -15,17 +15,33 @@ const Header: React.FC<THeader> = ({ className }) => {
 	return (
 		<header className={`${styles["wrapper"]} ${className}`}>
 			<div className={`${styles["container"]}`}>
-				<div className={styles["logo"]}>
-					<p>TBox</p>
+				<div className={styles["header--large_screen"]}>
+					<div className={styles["logo"]}>
+						<p>TBox</p>
+					</div>
+
+					<Input
+						size="large"
+						placeholder="Tìm kiếm..."
+						prefix={<MdOutlineSearch size={24} />}
+						className={styles["search"]}
+					/>
+					<Button
+						icon={theme === "light" ? <MdDarkMode /> : <MdLightMode />}
+						onClick={toggleTheme}
+						aria-label="Toggle theme"
+					/>
 				</div>
 
-				<Button
-					icon={theme === "light" ? <MdDarkMode />: <MdLightMode />}
-					onClick={toggleTheme}
+				<Input
+					size="large"
+					placeholder="Tìm kiếm..."
+					prefix={<MdOutlineSearch size={24} />}
+					className={styles["search--small_screen"]}
 				/>
 			</div>
 		</header>
 	);
 };
 
-export default Header;
+export default memo(Header);
